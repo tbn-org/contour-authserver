@@ -11,4 +11,4 @@ resources:
 images:
 - name: htpasswd
   newName: rfinner/contour-authserver
-  newTag: "1.7"
+  newTag: latest
