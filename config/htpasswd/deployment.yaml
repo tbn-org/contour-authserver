@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: htpasswd
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -60,5 +60,4 @@ spec:
     targetPort: 9443
   selector:
     app.kubernetes.io/name: htpasswd
-  replicas: 2
   type: ClusterIP
