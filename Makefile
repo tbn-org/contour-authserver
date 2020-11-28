@@ -7,7 +7,7 @@ endif
 
 BIN := contour-authserver
 
-REPO := github.com/projectcontour/contour-authserver
+REPO := github.com/tbn-org/contour-authserver
 SHA := $(shell git rev-parse --short=8 HEAD)
 VERSION := $(shell git describe --exact-match 2>/dev/null || basename $$(git describe --all --long 2>/dev/null))
 BUILDDATE := $(shell TZ=GMT date '+%Y-%m-%dT%R:%S%z')
@@ -21,7 +21,7 @@ GO_BUILD_LDFLAGS := \
 	-X $(REPO)/pkg/version.BuildDate=$(BUILDDATE)
 
 # Image URL to use all building/pushing image targets
-IMG ?= $(BIN):$(VERSION)
+IMG ?= rfinner/$(BIN):$(VERSION)
 
 all: build
 
@@ -82,7 +82,7 @@ docker-push: ## Push the docker image
 .PHONY: release
 release: ## Build and publish a release to Github
 	# Check there is a token.
-	[[ -n "$$GITHUB_TOKEN" ]] || [[ -r ~/.config/goreleaser/github_token ]]
+	#[[ -n "$$GITHUB_TOKEN" ]] || [[ -r ~/.config/goreleaser/github_token ]]
 	# Check we are on a tag.
 	git describe --exact-match >/dev/null
 	# Do a full dry-run.

@@ -37,8 +37,8 @@ spec:
           readOnly: true
         resources:
           limits:
-            cpu: 100m
-            memory: 30Mi
+            cpu: 300m
+            memory: 50Mi
       volumes:
       - name: tls
         secret:

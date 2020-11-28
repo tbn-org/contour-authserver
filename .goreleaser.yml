@@ -41,8 +41,8 @@ dockers:
   dockerfile: hack/Dockerfile.release
   skip_push: true
   image_templates:
-    - "projectcontour/{{ .ProjectName }}:{{ .Env.VERSION }}"
-    - "projectcontour/{{ .ProjectName }}:latest"
+    - "rfinner/{{ .ProjectName }}:{{ .Env.VERSION }}"
+    - "rfinner/{{ .ProjectName }}:latest"
   build_flag_templates:
   - "--pull"
   - "--label=org.opencontainers.image.created={{.Date}}"

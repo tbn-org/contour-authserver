@@ -8,5 +8,5 @@ resources:
 
 images:
 - name: testserver
-  newName: contour-authserver
-  newTag: latest
+  newName: rfinner/contour-authserver
+  newTag: "1.7"
