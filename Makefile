@@ -5,6 +5,7 @@ else
 GOBIN=$(shell go env GOBIN)
 endif
 
+
 BIN := contour-authserver
 
 REPO := github.com/tbn-org/contour-authserver
