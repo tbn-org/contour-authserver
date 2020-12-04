@@ -9,7 +9,7 @@ resources:
 images:
 - name: controller
   newName: rfinner/contour-authserver
-  newTag: v2.3
+  newTag: v2.5
 - name: testserver
   newName: rfinner/contour-authserver
   newTag: latest
